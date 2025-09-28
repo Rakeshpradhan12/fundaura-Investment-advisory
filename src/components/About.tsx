@@ -13,14 +13,12 @@ export default function About(): JSX.Element {
           <div className="card p-24">
             <h3>Our Mission</h3>
             <p className="muted mt-8">
-              Empower every investor to choose the right products for their goals, track progress easily, and stay financially well.
-            </p>
+              To empower individuals and institutions to achieve financial independence by delivering innovative, transparent, and personalized wealth generation, fund management, and wealth management solutions that build lasting value and financial resilience.            </p>
           </div>
           <div className="card p-24">
             <h3>Our Vision</h3>
             <p className="muted mt-8">
-              Make trusted investing guidance accessible with fast, accurate information and human support when it matters.
-            </p>
+              To be a trusted leader in investment excellence—reshaping the future of wealth by combining expert insights, cutting-edge technology, and client-first strategies to unlock sustainable financial growth for all.            </p>
           </div>
         </div>
       </div>

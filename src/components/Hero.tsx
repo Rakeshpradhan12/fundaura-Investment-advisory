@@ -10,7 +10,8 @@ export default function Hero(): JSX.Element {
         <div>
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <div className="badge">{SITE.highlight}</div>
-            <h1 className="h1">Welcome to {SITE.brand} Investment Advisory</h1>
+            <h1 className="h1">Welcome to {SITE.brand}</h1>
+            <h5>by Riokap(Subsidiary of Aificon advisory and consulting pvt ltd)</h5>
             <p className="muted">Strategic Insights. Simpler Decisions.</p>
             <div className="row gap-12 mt-16">
               <a href="#contact" className="btn">

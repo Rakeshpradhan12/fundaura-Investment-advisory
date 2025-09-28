@@ -1,4 +1,15 @@
-export type Service = { code: string; name: string; risk: 'HIGH' | 'MODERATE' | 'LOW'; type: string; min: string };
+export type Service = {
+  code: string;
+  name: string;
+  risk: 'HIGH' | 'MEDIUM' | 'LOW';
+  type: string;
+  min: string;
+  allocation?: string;
+  lockIn?: string;
+  withdrawal?: string;
+  hurdleRate?: string;
+  charges?: { amc: string; performance: string; exit: string };
+};
 export type KPI = { label: string; value: string };
 export type PricingPlan = { name: string; price: string; features: string[] };
 
@@ -11,6 +22,8 @@ export interface SiteConfig {
   sebi: { show: boolean; registrationLabel: string; registrationValue: string; complianceOfficer: string };
   nav: { label: string; href: string }[];
   servicesIntro: string;
+  servicesPoints: string[];
+  servicesEnd: string;
   services: Service[];
   kpis: KPI[];
   pricing: PricingPlan[];
@@ -18,9 +31,9 @@ export interface SiteConfig {
 }
 
 export const SITE: SiteConfig = {
-  brand: 'FundAura by Riocap',
+  brand: 'FundAura',
   domain: 'fundaura.in',
-  highlight: 'An IIM Alumni Initiative',
+  highlight: 'An IIMK Alumni Initiative',
   tagline: 'Strategic Insights. Simpler Decisions.',
   contact: {
     address: '402, B120, sapporji pallonji complex, new town, kolkata 700135',
@@ -42,21 +55,49 @@ export const SITE: SiteConfig = {
     { label: 'Careers', href: '#careers' },
     { label: 'Complaint Board', href: '#complaint' }
   ],
-  servicesIntro: 'Explore our core offerings. Risk level and horizon are indicative—final suitability depends on your profile and risk assessment.',
-  services: [
-    { code: '01', name: 'Stock Option', risk: 'HIGH', type: 'Intraday / Ultra Short Term', min: '₹50,000' },
-    { code: '02', name: 'Option Ultra', risk: 'HIGH', type: 'Intraday / Ultra Short Term', min: '₹2,00,000' },
-    { code: '03', name: 'Stock Cash', risk: 'MODERATE', type: 'Short to Medium Term', min: '₹2,00,000' },
-    { code: '04', name: 'Cash Ultra', risk: 'MODERATE', type: 'Short to Medium Term', min: '₹2,00,000' },
-    { code: '05', name: 'Stock Future', risk: 'HIGH', type: 'Intraday / Ultra Short Term', min: '₹2,00,000' }
+  servicesIntro: `By blending cutting-edge data analytics, predictive algorithms, and human insight, we provide end-to-end services across:`,
+  servicesPoints: [
+    'Fund Management',
+    'Portfolio Management',
+    'Investment Advisory'
   ],
+  servicesEnd: `With innovation at our core and trust as our foundation, we’re not just building a platform—we’re building a new standard in wealth management.`,
+  services: [
+    {
+      code: '01',
+      name: '24 Karat',
+      risk: 'HIGH',
+      type: 'Quarterly, Annually',
+      min: '₹10,00,000',
+      allocation: 'Equity & Derivatives: 60-70%, Fixed Income Security: 30-40%',
+      lockIn: '12 Months',
+      withdrawal: 'Quarterly, Annually',
+      hurdleRate: '24%',
+      charges: { amc: '2%', performance: '35%', exit: '1%' }
+    },
+    {
+      code: '02',
+      name: '16 Karat',
+      risk: 'MEDIUM',
+      type: 'Quarterly, Annually',
+      min: '₹5,00,000',
+      allocation: 'Equity & Derivatives: 40-50%, Fixed Income Security: 50-60%',
+      lockIn: '12 Months',
+      withdrawal: 'Quarterly, Annually',
+      hurdleRate: '16%',
+      charges: { amc: '1.5%', performance: '30%', exit: '1%' }
+
+    },
+  ],
+
+
   kpis: [
-    { label: 'Years of Experience', value: '10+' },
-    { label: 'Customer Satisfaction', value: '99%' }
+    { label: 'Years of Experience', value: '14+' },
+    { label: 'Customer Satisfaction', value: '100%' }
   ],
   pricing: [
-    { name: 'Starter', price: '₹4,999/mo', features: ['Basic signals', 'Email support', 'Monthly summary'] },
-    { name: 'Growth', price: '₹9,999/mo', features: ['Priority alerts', 'Phone support', 'Weekly review call'] },
+    { name: 'Starter', price: '₹3,999/mo', features: ['Basic signals', 'Email support', 'Monthly summary'] },
+    { name: 'Growth', price: '₹7,999/mo', features: ['Priority alerts', 'Phone support', 'Weekly review call'] },
     { name: 'Pro HNI', price: 'Custom', features: ['Custom strategies', 'Dedicated RM', 'Detailed reporting'] }
   ],
   social: [
