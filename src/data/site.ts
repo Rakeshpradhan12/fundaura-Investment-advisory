@@ -18,7 +18,7 @@ export interface SiteConfig {
   domain: string;
   highlight: string;
   tagline: string;
-  contact: { address: string; phone: string; email: string };
+  contact: { address1: string; address2: string; phone: string; email: string };
   sebi: { show: boolean; registrationLabel: string; registrationValue: string; complianceOfficer: string };
   nav: { label: string; href: string }[];
   servicesIntro: string;
@@ -36,7 +36,8 @@ export const SITE: SiteConfig = {
   highlight: 'An IIMK Alumni Initiative',
   tagline: 'Strategic Insights. Simpler Decisions.',
   contact: {
-    address: '402, B120, sapporji pallonji complex, new town, kolkata 700135',
+    address1: '402, B120, Shapoorji Pallonji Complex, New Town, Kolkata – 700135',
+    address2: 'ST-5, 2nd Floor, SRB Tower, Infocity, Patia, Bhubaneswar – 751021',
     phone: '+91-88200 34446',
     email: 'Riokapital@gmail.com'
   },

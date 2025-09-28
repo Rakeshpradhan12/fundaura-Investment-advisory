@@ -26,8 +26,12 @@ export default function Contact(): JSX.Element {
         <div className="card p-24">
           <div className="stack gap-12">
             <div>
-              <strong>Address</strong>
-              <div className="muted">{SITE.contact.address}</div>
+              <strong>Registered Address</strong>
+              <div className="muted">{SITE.contact.address1}</div>
+            </div>
+            <div>
+              <strong>Regional Office</strong>
+              <div className="muted">{SITE.contact.address2}</div>
             </div>
             <div>
               <strong>Phone</strong>
