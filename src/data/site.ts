@@ -89,6 +89,19 @@ export const SITE: SiteConfig = {
       charges: { amc: '1.5%', performance: '30%', exit: '1%' }
 
     },
+    {
+      code: '03',
+      name: '10 Karat',
+      risk: 'MEDIUM',
+      type: 'Quarterly, Annually',
+      min: '₹2,00,000',
+      allocation: 'Equity & Derivatives: 20%, Fixed Income Security: 80%',
+      lockIn: '12 Months',
+      withdrawal: 'Quarterly, Annually',
+      hurdleRate: '10%',
+      charges: { amc: '1%', performance: '25%', exit: '1%' }
+
+    },
   ],
 
 
