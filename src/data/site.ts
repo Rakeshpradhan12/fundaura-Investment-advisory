@@ -92,7 +92,7 @@ export const SITE: SiteConfig = {
     {
       code: '03',
       name: '10 Karat',
-      risk: 'MEDIUM',
+      risk: 'LOW',
       type: 'Quarterly, Annually',
       min: '₹2,00,000',
       allocation: 'Equity & Derivatives: 20%, Fixed Income Security: 80%',
