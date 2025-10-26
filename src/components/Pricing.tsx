@@ -7,9 +7,9 @@ export default function Pricing(): JSX.Element {
       <div className="container">
         <div className="section-title center">
           <div className="badge">Plans</div>
-          <h2>Transparent Pricing</h2>
+          <h2>Advisory Services</h2>
         </div>
-        <div className="grid3 gap-16">
+        <div className="grid4 gap-16">
           {SITE.pricing.map((p) => (
             <div key={p.name} className="card p-24">
               <h3>{p.name}</h3>

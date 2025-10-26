@@ -6,7 +6,7 @@ export default function Header(): JSX.Element {
     <header className="header sticky">
       <div className="container row space-between">
         <div className="row gap-8 center">
-          <img src="/logo-fundaura.png" alt="Fundaura logo" className="logo" />
+          <img src="/RioCaplogo.png" alt="Fundaura logo" className="logo" />
         </div>
         <nav className="nav hide-sm">
           {SITE.nav.map((n) => (

@@ -110,9 +110,10 @@ export const SITE: SiteConfig = {
     { label: 'Customer Satisfaction', value: '100%' }
   ],
   pricing: [
-    { name: 'Starter', price: '₹3,999/mo', features: ['Basic signals', 'Email support', 'Monthly summary'] },
-    { name: 'Growth', price: '₹7,999/mo', features: ['Priority alerts', 'Phone support', 'Weekly review call'] },
-    { name: 'Pro HNI', price: 'Custom', features: ['Custom strategies', 'Dedicated RM', 'Detailed reporting'] }
+    { name: 'Standard', price: '₹2,999/mo', features: ['Basic signals', 'Email support', 'Monthly summary'] },
+    { name: 'Ultra ', price: '₹4,999/mo', features: ['Priority alerts', 'Phone support', 'Weekly review call'] },
+    { name: 'Max ', price: '₹6,999/mo', features: ['Personalized Support', 'Expert Analysis'] },
+    { name: 'Custom', price: '₹7,999/mo', features: ['Custom strategies', 'Dedicated RM', 'Detailed reporting'] }
   ],
   social: [
     { label: 'Facebook', href: '#' },
