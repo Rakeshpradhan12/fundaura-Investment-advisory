@@ -35,7 +35,6 @@ export default function Hero(): JSX.Element {
               <button className="btn" type="submit">
                 Submit your query
               </button>
-              <p className="hint">This form works on Netlify out-of-the-box. Or wire to your backend.</p>
             </form>
           </div>
         </div>

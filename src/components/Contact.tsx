@@ -20,7 +20,6 @@ export default function Contact(): JSX.Element {
             </select>
             <textarea placeholder="Your message" rows={4} name="message"></textarea>
             <button className="btn" type="submit">Submit</button>
-            <p className="hint">Submissions appear under Netlify → Forms if hosted there.</p>
           </form>
         </div>
         <div className="card p-24">
