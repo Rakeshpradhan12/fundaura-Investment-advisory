@@ -7,7 +7,7 @@ export default function Footer(): JSX.Element {
       <div className="container grid4">
         <div>
           <div className="row center gap-8">
-            <img className="logo-sm" src="/logo-fundaura.png" alt="logo" />
+            <img className="logo-sm" src="/RioCaplogo.png" alt="logo" />
           </div>
           <div className="muted small mt-8">
             Copyright © {new Date().getFullYear()} {SITE.brand}. All rights reserved.
