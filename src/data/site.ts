@@ -10,6 +10,20 @@ export type Service = {
   hurdleRate?: string;
   charges?: { amc: string; performance: string; exit: string };
 };
+export type Pms = {
+  code: string;
+  name: string;
+  risk: 'HIGH' | 'MEDIUM' | 'LOW';
+  type: string;
+  min: string;
+  allocation?: string;
+  lockIn?: string;
+  withdrawal?: string;
+  hurdleRate?: string;
+  charges?: { amc: string; performance: string; exit: string };
+};
+
+
 export type KPI = { label: string; value: string };
 export type PricingPlan = { name: string; price: string; features: string[] };
 
@@ -25,6 +39,7 @@ export interface SiteConfig {
   servicesPoints: string[];
   servicesEnd: string;
   services: Service[];
+  pms: Pms[];
   kpis: KPI[];
   pricing: PricingPlan[];
   social: { label: string; href: string }[];
@@ -58,7 +73,7 @@ export const SITE: SiteConfig = {
   ],
   servicesIntro: `By blending cutting-edge data analytics, predictive algorithms, and human insight, we provide end-to-end services across:`,
   servicesPoints: [
-    'Fund Management',
+    'Wealth Management',
     'Portfolio Management',
     'Investment Advisory'
   ],
@@ -99,6 +114,47 @@ export const SITE: SiteConfig = {
       lockIn: '12 Months',
       withdrawal: 'Quarterly, Annually',
       hurdleRate: '10%',
+      charges: { amc: '1%', performance: '25%', exit: '1%' }
+
+    },
+  ],
+
+  pms: [
+    {
+      code: '01',
+      name: 'Ruby',
+      risk: 'HIGH',
+      type: 'Annually',
+      min: '₹40,00,000',
+      allocation: 'Mutual Funds, Equity & Derivatives: 60-70%, Fixed Income Security: 20-25%, Others: 10% - 15%',
+      lockIn: '12 Months',
+      withdrawal: 'Annually',
+      hurdleRate: '18%',
+      charges: { amc: '2%', performance: '35%', exit: '1%' }
+    },
+    {
+      code: '02',
+      name: 'Sapphire',
+      risk: 'MEDIUM',
+      type: 'Annually',
+      min: '₹25,00,000',
+      allocation: 'Mutual Funds,Equity & Derivatives: 50-60%, Fixed Income Security: 30-40%, Others: 5% - 10%',
+      lockIn: '12 Months',
+      withdrawal: 'Annually',
+      hurdleRate: '14%',
+      charges: { amc: '1.5%', performance: '30%', exit: '1%' }
+
+    },
+    {
+      code: '03',
+      name: 'Emerald',
+      risk: 'LOW',
+      type: 'Annually',
+      min: '₹15,00,000',
+      allocation: 'Mutual Funds,Equity & Derivatives: 25% - 30%, Fixed Income Security: 65% - 70%, Others: 5%',
+      lockIn: '12 Months',
+      withdrawal: 'Annually',
+      hurdleRate: '8%',
       charges: { amc: '1%', performance: '25%', exit: '1%' }
 
     },
