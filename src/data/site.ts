@@ -63,32 +63,32 @@ export const SITE: SiteConfig = {
     complianceOfficer: 'Compliance Officer: (Name)'
   },
   nav: [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Services', href: '#services' },
-    { label: 'Pricing', href: '#pricing' },
+
+    { label: 'About US', href: '#about' },
+    { label: 'Product & Services', href: '#services' },
     { label: 'Contact', href: '#contact' },
     { label: 'Careers', href: '#careers' },
-    { label: 'Complaint Board', href: '#complaint' }
+    { label: 'Complaint Board', href: '#complaint' },
+    { label: 'Login', href: '#home' }
   ],
   servicesIntro: `By blending cutting-edge data analytics, predictive algorithms, and human insight, we provide end-to-end services across:`,
   servicesPoints: [
     'Wealth Management',
     'Portfolio Management',
-    'Investment Advisory'
+    'Advisory Services'
   ],
   servicesEnd: `With innovation at our core and trust as our foundation, we’re not just building a platform—we’re building a new standard in wealth management.`,
   services: [
     {
       code: '01',
-      name: '24 Karat',
+      name: '22 Karat',
       risk: 'HIGH',
       type: 'Quarterly, Annually',
       min: '₹10,00,000',
       allocation: 'Equity & Derivatives: 60-70%, Fixed Income Security: 30-40%',
       lockIn: '12 Months',
       withdrawal: 'Quarterly, Annually',
-      hurdleRate: '24%',
+      hurdleRate: '22%',
       charges: { amc: '2%', performance: '35%', exit: '1%' }
     },
     {

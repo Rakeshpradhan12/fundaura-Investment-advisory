@@ -3,11 +3,12 @@ import { SITE } from '../data/site';
 
 export default function Services(): JSX.Element {
   return (
+    <>
     <section id="services" className="section alt">
       <div className="container">
         <div className="section-title">
           <div className="badge">Services</div>
-          <h2>Discover all the services</h2>
+          <h2>Products & Services</h2>
           <p className="muted mt-8">{SITE.servicesIntro}</p>
           <ul>
             {SITE.servicesPoints.map((point, i) => (
@@ -42,7 +43,6 @@ export default function Services(): JSX.Element {
                     <strong>Charges:</strong>
                     <ul className="mt-4 pl-16">
                       <li>AMC: {s.charges.amc}</li>
-                      <li>Performance Fee: {s.charges.performance}</li>
                       <li>Exit Fee: {s.charges.exit}</li>
                     </ul>
                   </div>
@@ -102,6 +102,33 @@ export default function Services(): JSX.Element {
         </div>
 
       </div>
+
+        <div className="container">
+          <div className="section-title">
+            <h2>Advisory Services</h2>
+          </div>
+          <div className="grid4 gap-16">
+            {SITE.pricing.map((p) => (
+              <div key={p.name} className="card p-24">
+                <h3>{p.name}</h3>
+                <div className="price">{p.price}</div>
+                <ul className="list mt-12">
+                  {p.features.map((f) => (
+                    <li key={f}>{f}</li>
+                  ))}
+                </ul>
+                <a className="btn mt-16" href="#contact">
+                  Choose {p.name}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+
     </section>
+
+
+    </>
+
   );
 }

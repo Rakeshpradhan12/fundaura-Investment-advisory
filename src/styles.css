@@ -66,3 +66,61 @@ img{max-width:100%;display:block}
 input,select,textarea{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--line);outline:none}
 input:focus,select:focus,textarea:focus{border-color:#93c5fd;box-shadow:0 0 0 3px rgba(59,130,246,.15)}
 .hint{font-size:12px;color:var(--muted)}
+
+/* === About Dropdown === */
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.dropdown {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.dropdown-header {
+  width: 100%;
+  text-align: left;
+  padding: 16px 20px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text);
+  background: #f9fafb;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.dropdown-header:hover {
+  background: #eef6ff;
+}
+
+.dropdown-header.active {
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: #fff;
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 20px;
+}
+
+.dropdown-content.open {
+  max-height: 500px;
+  /* enough for content height */
+  padding: 16px 20px 20px;
+}
+
+.arrow {
+  font-size: 14px;
+}
