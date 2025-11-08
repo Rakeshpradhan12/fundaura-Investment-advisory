@@ -85,7 +85,7 @@ export const SITE: SiteConfig = {
       risk: 'HIGH',
       type: 'Quarterly, Annually',
       min: '₹10,00,000',
-      allocation: 'Equity & Derivatives: 60-70%, Fixed Income Security: 30-40%',
+      allocation: 'Equity & Derivatives: 70%, Fixed Income Security: 30%',
       lockIn: '12 Months',
       withdrawal: 'Quarterly, Annually',
       hurdleRate: '22%',
@@ -97,7 +97,7 @@ export const SITE: SiteConfig = {
       risk: 'MEDIUM',
       type: 'Quarterly, Annually',
       min: '₹5,00,000',
-      allocation: 'Equity & Derivatives: 40-50%, Fixed Income Security: 50-60%',
+      allocation: 'Equity & Derivatives: 50%, Fixed Income Security: 50%',
       lockIn: '12 Months',
       withdrawal: 'Quarterly, Annually',
       hurdleRate: '16%',
@@ -168,7 +168,7 @@ export const SITE: SiteConfig = {
   pricing: [
     { name: 'Standard', price: '₹2,999/mo', features: ['Basic signals', 'Email support', 'Monthly summary'] },
     { name: 'Ultra ', price: '₹4,999/mo', features: ['Priority alerts', 'Phone support', 'Weekly review call'] },
-    { name: 'Max ', price: '₹6,999/mo', features: ['Personalized Support', 'Expert Analysis'] },
+    {name: 'Max', price: '₹6,999/mo', features: [`Personalized Support `,'Expert Analysis',]},
     { name: 'Custom', price: '₹7,999/mo', features: ['Custom strategies', 'Dedicated RM', 'Detailed reporting'] }
   ],
   social: [

@@ -34,7 +34,17 @@ export default function Services(): JSX.Element {
               {/* Details */}
               <div className="mt-8">
                 <p><strong>Minimum Investment:</strong> {s.min}</p>
-                {s.allocation && <p><strong>Asset Allocation:</strong> {s.allocation}</p>}
+                {s.allocation && (
+                  <div className="mt-8">
+                    <strong>Asset Allocation:</strong>
+                    <ul className="mt-4 pl-16">
+                      {s.allocation.split(',').map((item, index) => (
+                        <li key={index}>{item.trim()}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 {s.lockIn && <p><strong>Lock-in Period:</strong> {s.lockIn}</p>}
                 {s.withdrawal && <p><strong>Profit Withdrawal:</strong> {s.withdrawal}</p>}
                 {s.hurdleRate && <p><strong>Hurdle Rate:</strong> {s.hurdleRate}</p>}
@@ -76,7 +86,17 @@ export default function Services(): JSX.Element {
               {/* Details */}
               <div className="mt-8">
                 <p><strong>Minimum Investment:</strong> {s.min}</p>
-                {s.allocation && <p><strong>Asset Allocation:</strong> {s.allocation}</p>}
+                {s.allocation && (
+                  <div className="mt-8">
+                    <strong>Asset Allocation:</strong>
+                    <ul className="mt-4 pl-16">
+                      {s.allocation.split(',').map((item, index) => (
+                        <li key={index}>{item.trim()}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 {s.lockIn && <p><strong>Lock-in Period:</strong> {s.lockIn}</p>}
                 {s.withdrawal && <p><strong>Profit Withdrawal:</strong> {s.withdrawal}</p>}
                 {s.hurdleRate && <p><strong>Hurdle Rate:</strong> {s.hurdleRate}</p>}
