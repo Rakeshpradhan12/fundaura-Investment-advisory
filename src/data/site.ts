@@ -53,7 +53,7 @@ export const SITE: SiteConfig = {
   contact: {
     address1: '402, B120, Shapoorji Pallonji Complex, New Town, Kolkata – 700135',
     address2: 'ST-5, 2nd Floor, SRB Tower, Infocity, Patia, Bhubaneswar – 751021',
-    phone: '+91-88200 34446',
+    phone: '+91-95564 93311',
     email: 'Riokapital@gmail.com'
   },
   sebi: {
@@ -168,7 +168,7 @@ export const SITE: SiteConfig = {
   pricing: [
     { name: 'Standard', price: '₹2,999/mo', features: ['Basic signals', 'Email support', 'Monthly summary'] },
     { name: 'Ultra ', price: '₹4,999/mo', features: ['Priority alerts', 'Phone support', 'Weekly review call'] },
-    {name: 'Max', price: '₹6,999/mo', features: [`Personalized Support `,'Expert Analysis',]},
+    { name: 'Max', price: '₹6,999/mo', features: [`Personalized Support `, 'Expert Analysis',] },
     { name: 'Custom', price: '₹7,999/mo', features: ['Custom strategies', 'Dedicated RM', 'Detailed reporting'] }
   ],
   social: [
