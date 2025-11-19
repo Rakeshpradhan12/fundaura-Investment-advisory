@@ -3,18 +3,24 @@ import { SITE } from '../data/site';
 
 export default function Footer(): JSX.Element {
   return (
-    <footer className="footer">
+    <footer className="footer" role="contentinfo">
       <div className="container footer-grid">
         {/* Logo & copyright */}
         <div className="footer-logo">
-          <img className="logo-sm" src="/RioCaplogo.png" alt="logo" />
+          <img
+            className="logo-sm"
+            src="/RioCaplogo.png"
+            alt={`${SITE.brand} Logo`}
+            width={160}
+            height={50}
+          />
           <p className="muted small mt-8">
-            Copyright © {new Date().getFullYear()} {SITE.brand}. All rights reserved.
+            © {new Date().getFullYear()} {SITE.brand}. All rights reserved.
           </p>
         </div>
 
-        {/* Services */}
-        <div className="footer-section">
+        {/* Services Navigation */}
+        <nav className="footer-section" aria-label="Services">
           <h5>Services</h5>
           <ul>
             {SITE.services.map((s) => (
@@ -33,10 +39,10 @@ export default function Footer(): JSX.Element {
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
 
-        {/* Company */}
-        <div className="footer-section">
+        {/* Company Navigation */}
+        <nav className="footer-section" aria-label="Company">
           <h5>Company</h5>
           <ul>
             {SITE.nav.slice(0, 5).map((n) => (
@@ -45,28 +51,40 @@ export default function Footer(): JSX.Element {
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
 
         {/* Group Companies */}
-        <div className="footer-section">
+        <section className="footer-section" aria-label="Group Companies">
           <h5>Group Companies</h5>
           <p>Subsidiary of Aificon Advisory and Consulting Pvt Ltd</p>
-          <div className="footer-social row gap-8 mt-8">
+          <nav className="footer-social row gap-8 mt-8" aria-label="Social media links">
             {SITE.social.map((s) => (
-              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer">
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.label}
+              >
                 {s.label}
               </a>
             ))}
-          </div>
-        </div>
+          </nav>
+        </section>
       </div>
 
       {/* Footer Buttons */}
-      <div className="footer-bottom row gap-12 mt-16">
-        <a className="btn outline" href="#" id="terms">Terms of Use</a>
-        <a className="btn outline" href="#" id="privacy">Privacy Policy</a>
-        <a className="btn outline" href="#" id="charter">Investor Charter</a>
-      </div>
+      <nav className="footer-bottom row gap-12 mt-16" aria-label="Footer legal and policy links">
+        <a className="btn outline" href="#" id="terms" role="button">
+          Terms of Use
+        </a>
+        <a className="btn outline" href="#" id="privacy" role="button">
+          Privacy Policy
+        </a>
+        <a className="btn outline" href="#" id="charter" role="button">
+          Investor Charter
+        </a>
+      </nav>
     </footer>
   );
 }

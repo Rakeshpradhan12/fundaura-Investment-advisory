@@ -12,18 +12,15 @@ export default function About(): JSX.Element {
   useEffect(() => {
     const onHashChange = () => {
       const hash = window.location.hash.replace("#", "");
-
       if (["who", "mission", "vision", "values"].includes(hash)) {
         setOpenSection(hash);
         setTimeout(() => {
           document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
-        }, 100);
+        }, 100); // allow element to open before scrolling
       }
     };
 
-    // run when page loads with a hash
     onHashChange();
-
     window.addEventListener("hashchange", onHashChange);
     return () => window.removeEventListener("hashchange", onHashChange);
   }, []);
@@ -44,11 +41,18 @@ export default function About(): JSX.Element {
             <button
               className={`dropdown-header ${openSection === "who" ? "active" : ""}`}
               onClick={() => toggleSection("who")}
+              aria-expanded={openSection === "who"}
+              aria-controls="who-content"
             >
               Who Are We?
               <span className="arrow">{openSection === "who" ? "▲" : "▼"}</span>
             </button>
-            <div className={`dropdown-content ${openSection === "who" ? "open" : ""}`}>
+            <div
+              id="who-content"
+              className={`dropdown-content ${openSection === "who" ? "open" : ""}`}
+              role="region"
+              aria-labelledby="who"
+            >
               <p className="muted mt-8">
                 We are a next-generation FinTech startup redefining wealth management…
               </p>
@@ -63,11 +67,18 @@ export default function About(): JSX.Element {
             <button
               className={`dropdown-header ${openSection === "mission" ? "active" : ""}`}
               onClick={() => toggleSection("mission")}
+              aria-expanded={openSection === "mission"}
+              aria-controls="mission-content"
             >
               Our Mission
               <span className="arrow">{openSection === "mission" ? "▲" : "▼"}</span>
             </button>
-            <div className={`dropdown-content ${openSection === "mission" ? "open" : ""}`}>
+            <div
+              id="mission-content"
+              className={`dropdown-content ${openSection === "mission" ? "open" : ""}`}
+              role="region"
+              aria-labelledby="mission"
+            >
               <p className="muted mt-8">
                 To empower individuals and institutions with transparent wealth solutions…
               </p>
@@ -79,11 +90,18 @@ export default function About(): JSX.Element {
             <button
               className={`dropdown-header ${openSection === "vision" ? "active" : ""}`}
               onClick={() => toggleSection("vision")}
+              aria-expanded={openSection === "vision"}
+              aria-controls="vision-content"
             >
               Our Vision
               <span className="arrow">{openSection === "vision" ? "▲" : "▼"}</span>
             </button>
-            <div className={`dropdown-content ${openSection === "vision" ? "open" : ""}`}>
+            <div
+              id="vision-content"
+              className={`dropdown-content ${openSection === "vision" ? "open" : ""}`}
+              role="region"
+              aria-labelledby="vision"
+            >
               <p className="muted mt-8">
                 To be a trusted leader in investment excellence…
               </p>
@@ -95,11 +113,18 @@ export default function About(): JSX.Element {
             <button
               className={`dropdown-header ${openSection === "values" ? "active" : ""}`}
               onClick={() => toggleSection("values")}
+              aria-expanded={openSection === "values"}
+              aria-controls="values-content"
             >
               Our Values
               <span className="arrow">{openSection === "values" ? "▲" : "▼"}</span>
             </button>
-            <div className={`dropdown-content ${openSection === "values" ? "open" : ""}`}>
+            <div
+              id="values-content"
+              className={`dropdown-content ${openSection === "values" ? "open" : ""}`}
+              role="region"
+              aria-labelledby="values"
+            >
               <ul className="muted mt-8">
                 <li>Put client interests first</li>
                 <li>Maintain high professional standards</li>
