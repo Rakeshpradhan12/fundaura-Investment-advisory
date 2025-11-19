@@ -4,7 +4,7 @@ export type Service = {
   risk: 'HIGH' | 'MEDIUM' | 'LOW';
   type: string;
   min: string;
-  allocation?: string;
+  allocation?: string[];
   lockIn?: string;
   withdrawal?: string;
   hurdleRate?: string;
@@ -16,7 +16,7 @@ export type Pms = {
   risk: 'HIGH' | 'MEDIUM' | 'LOW';
   type: string;
   min: string;
-  allocation?: string;
+  allocation?: string[];
   lockIn?: string;
   withdrawal?: string;
   hurdleRate?: string;
@@ -25,7 +25,9 @@ export type Pms = {
 
 
 export type KPI = { label: string; value: string };
-export type PricingPlan = { name: string; price: string; features: string[] };
+export type PricingPlan = {
+  [x: string]: any | null | undefined; name: string; price: string; features: string[]
+};
 
 export interface SiteConfig {
   brand: string;
@@ -34,7 +36,7 @@ export interface SiteConfig {
   tagline: string;
   contact: { address1: string; address2: string; phone: string; email: string };
   sebi: { show: boolean; registrationLabel: string; registrationValue: string; complianceOfficer: string };
-  nav: { label: string; href: string }[];
+  nav: { label: string; href: string; children?: { label: string; href: string }[];}[];
   servicesIntro: string;
   servicesPoints: string[];
   servicesEnd: string;
@@ -63,12 +65,45 @@ export const SITE: SiteConfig = {
     complianceOfficer: 'Compliance Officer: (Name)'
   },
   nav: [
+    {
+      label: 'About Us',
+      href: '#about',
+      children: [
+        { label: 'Mission', href: '#mission' },
+        { label: 'Vision', href: '#vision' },
+        { label: 'Values', href: '#values' }
+      ]
+    },
+    {
+      label: 'Product & Services',
+      href: '#services',
+      children: [
+        { label: 'Wealth Management', href: '#wealth' },
+        { label: 'Portfolio Management', href: '#portfolio' },
+        { label: 'Advisory Services', href: '#advisory' }
+      ]
+    },
+    {
+      label: 'Contact',
+      href: '#contact',
 
-    { label: 'About US', href: '#about' },
-    { label: 'Product & Services', href: '#services' },
-    { label: 'Contact', href: '#contact' },
-    { label: 'Careers', href: '#careers' },
-    { label: 'Complaint Board', href: '#complaint' },
+    },
+    {
+      label: 'Careers',
+      href: '#careers',
+      children: [
+        { label: 'See Open Roles', href: '#open-roles' }
+      ]
+    },
+    {
+      label: 'Complaint Board',
+      href: '#complaint',
+      children: [
+        { label: 'Terms of Use', href: '#terms' },
+        { label: 'Privacy Policy', href: '#privacy' },
+        { label: 'Investor Charter', href: '#charter' }
+      ]
+    },
     { label: 'Login', href: '#home' }
   ],
   servicesIntro: `By blending cutting-edge data analytics, predictive algorithms, and human insight, we provide end-to-end services across:`,
@@ -85,11 +120,11 @@ export const SITE: SiteConfig = {
       risk: 'HIGH',
       type: 'Quarterly, Annually',
       min: '₹10,00,000',
-      allocation: 'Equity & Derivatives: 70%, Fixed Income Security: 30%',
+      allocation: ['Equity & Derivatives: 70%', 'Fixed Income Security: 30%'],
       lockIn: '12 Months',
       withdrawal: 'Quarterly, Annually',
       hurdleRate: '22%',
-      charges: { amc: '2%', performance: '35%', exit: '1%' }
+      charges: { amc: '2%', performance: '35%', exit: '1%' },
     },
     {
       code: '02',
@@ -97,7 +132,7 @@ export const SITE: SiteConfig = {
       risk: 'MEDIUM',
       type: 'Quarterly, Annually',
       min: '₹5,00,000',
-      allocation: 'Equity & Derivatives: 50%, Fixed Income Security: 50%',
+      allocation: ['Equity & Derivatives: 50%', 'Fixed Income Security: 50%'],
       lockIn: '12 Months',
       withdrawal: 'Quarterly, Annually',
       hurdleRate: '16%',
@@ -110,7 +145,7 @@ export const SITE: SiteConfig = {
       risk: 'LOW',
       type: 'Quarterly, Annually',
       min: '₹2,00,000',
-      allocation: 'Equity & Derivatives: 20%, Fixed Income Security: 80%',
+      allocation: ['Equity & Derivatives: 20%', 'Fixed Income Security: 80%'],
       lockIn: '12 Months',
       withdrawal: 'Quarterly, Annually',
       hurdleRate: '10%',
@@ -126,7 +161,7 @@ export const SITE: SiteConfig = {
       risk: 'HIGH',
       type: 'Annually',
       min: '₹40,00,000',
-      allocation: 'Mutual Funds, Equity & Derivatives: 60-70%, Fixed Income Security: 20-25%, Others: 10% - 15%',
+      allocation: ['Mutual Funds, Equity & Derivatives: 60-70%', 'Fixed Income Security: 20-25%', 'Others: 10% - 15%'],
       lockIn: '12 Months',
       withdrawal: 'Annually',
       hurdleRate: '18%',
@@ -138,7 +173,7 @@ export const SITE: SiteConfig = {
       risk: 'MEDIUM',
       type: 'Annually',
       min: '₹25,00,000',
-      allocation: 'Mutual Funds,Equity & Derivatives: 50-60%, Fixed Income Security: 30-40%, Others: 5% - 10%',
+      allocation: ['Mutual Funds , Equity & Derivatives: 50-60%', 'Fixed Income Security: 30-40%', 'Others: 5% - 10%'],
       lockIn: '12 Months',
       withdrawal: 'Annually',
       hurdleRate: '14%',
@@ -151,7 +186,7 @@ export const SITE: SiteConfig = {
       risk: 'LOW',
       type: 'Annually',
       min: '₹15,00,000',
-      allocation: 'Mutual Funds,Equity & Derivatives: 25% - 30%, Fixed Income Security: 65% - 70%, Others: 5%',
+      allocation: ['Mutual Funds , Equity & Derivatives: 25% - 30%', 'Fixed Income Security: 65% - 70%', 'Others: 5%'],
       lockIn: '12 Months',
       withdrawal: 'Annually',
       hurdleRate: '8%',

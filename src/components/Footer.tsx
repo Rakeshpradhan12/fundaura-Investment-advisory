@@ -4,28 +4,41 @@ import { SITE } from '../data/site';
 export default function Footer(): JSX.Element {
   return (
     <footer className="footer">
-      <div className="container grid4">
-        <div>
-          <div className="row center gap-8">
-            <img className="logo-sm" src="/RioCaplogo.png" alt="logo" />
-          </div>
-          <div className="muted small mt-8">
+      <div className="container footer-grid">
+        {/* Logo & copyright */}
+        <div className="footer-logo">
+          <img className="logo-sm" src="/RioCaplogo.png" alt="logo" />
+          <p className="muted small mt-8">
             Copyright © {new Date().getFullYear()} {SITE.brand}. All rights reserved.
-          </div>
+          </p>
         </div>
-        <div>
+
+        {/* Services */}
+        <div className="footer-section">
           <h5>Services</h5>
-          <ul className="list">
-            {SITE.services.slice(0, 5).map((s) => (
+          <ul>
+            {SITE.services.map((s) => (
               <li key={s.code}>
-                <a href="#services">{s.name}</a>
+                <a href="#wealth">{s.name}</a>
+              </li>
+            ))}
+            {SITE.pms.map((s) => (
+              <li key={s.code}>
+                <a href="#portfolio">{s.name}</a>
+              </li>
+            ))}
+            {SITE.pricing.map((s, index) => (
+              <li key={index}>
+                <a href="#advisory">{s.name}</a>
               </li>
             ))}
           </ul>
         </div>
-        <div>
+
+        {/* Company */}
+        <div className="footer-section">
           <h5>Company</h5>
-          <ul className="list">
+          <ul>
             {SITE.nav.slice(0, 5).map((n) => (
               <li key={n.href}>
                 <a href={n.href}>{n.label}</a>
@@ -33,12 +46,26 @@ export default function Footer(): JSX.Element {
             ))}
           </ul>
         </div>
-        <div>
+
+        {/* Group Companies */}
+        <div className="footer-section">
           <h5>Group Companies</h5>
-          <div className="row wrap gap-8">
-            Subsidiary of Aificon advisory and consulting pvt ltd
+          <p>Subsidiary of Aificon Advisory and Consulting Pvt Ltd</p>
+          <div className="footer-social row gap-8 mt-8">
+            {SITE.social.map((s) => (
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer">
+                {s.label}
+              </a>
+            ))}
           </div>
         </div>
+      </div>
+
+      {/* Footer Buttons */}
+      <div className="footer-bottom row gap-12 mt-16">
+        <a className="btn outline" href="#" id="terms">Terms of Use</a>
+        <a className="btn outline" href="#" id="privacy">Privacy Policy</a>
+        <a className="btn outline" href="#" id="charter">Investor Charter</a>
       </div>
     </footer>
   );

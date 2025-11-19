@@ -4,7 +4,7 @@ import { SITE } from '../data/site';
 export default function Careers(): JSX.Element {
   return (
     <section id="careers" className="section">
-      <div className="container">
+      <div className="container" id='open-roles'>
         <div className="section-title">
           <div className="badge">Careers</div>
           <h2>Work with {SITE.brand}</h2>
@@ -12,7 +12,7 @@ export default function Careers(): JSX.Element {
         <p className="muted maxw">
           We're always exploring great talent in research, advisory, and client success. Share your CV at {SITE.contact.email}.
         </p>
-        <a className="btn outline mt-16" href="#contact">
+        <a className="btn outline mt-16" href="#contact" >
           See Open Roles
         </a>
       </div>

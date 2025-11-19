@@ -22,7 +22,7 @@ export default function Contact(): JSX.Element {
             <button className="btn" type="submit">Submit</button>
           </form>
         </div>
-        <div className="card p-24">
+        <div className="card p-24 contact-card">
           <div className="stack gap-12">
             <div>
               <strong>Registered Address</strong>

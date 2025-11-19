@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { SITE } from "../data/site";
 
 export default function About(): JSX.Element {
@@ -7,6 +7,26 @@ export default function About(): JSX.Element {
   const toggleSection = (section: string) => {
     setOpenSection(openSection === section ? null : section);
   };
+
+  // Auto-open ONLY when clicking a #hash link
+  useEffect(() => {
+    const onHashChange = () => {
+      const hash = window.location.hash.replace("#", "");
+
+      if (["who", "mission", "vision", "values"].includes(hash)) {
+        setOpenSection(hash);
+        setTimeout(() => {
+          document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    };
+
+    // run when page loads with a hash
+    onHashChange();
+
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
 
   return (
     <section id="about" className="section">
@@ -18,8 +38,9 @@ export default function About(): JSX.Element {
 
         {/* Dropdown Sections */}
         <div className="dropdown-container">
+
           {/* Who Are We */}
-          <div className="dropdown">
+          <div id="who" className="dropdown">
             <button
               className={`dropdown-header ${openSection === "who" ? "active" : ""}`}
               onClick={() => toggleSection("who")}
@@ -29,20 +50,16 @@ export default function About(): JSX.Element {
             </button>
             <div className={`dropdown-content ${openSection === "who" ? "open" : ""}`}>
               <p className="muted mt-8">
-                We are a next-generation FinTech startup redefining the way individuals and institutions manage, grow,
-                and protect their wealth. At the core of our platform is advanced AI—built to eliminate complexity,
-                uncover smarter opportunities, and deliver personalized investment strategies in real time.
+                We are a next-generation FinTech startup redefining wealth management…
               </p>
               <p className="muted mt-8">
-                Our goal is simple: to make intelligent investing accessible, transparent, and efficient. Whether you're
-                building your first portfolio or managing multi-million-rupee assets, our technology and team of experts
-                work together to optimize performance, manage risk, and align every decision with your goals.
+                Our goal is simple: make intelligent investing accessible…
               </p>
             </div>
           </div>
 
           {/* Mission */}
-          <div className="dropdown">
+          <div id="mission" className="dropdown">
             <button
               className={`dropdown-header ${openSection === "mission" ? "active" : ""}`}
               onClick={() => toggleSection("mission")}
@@ -52,15 +69,13 @@ export default function About(): JSX.Element {
             </button>
             <div className={`dropdown-content ${openSection === "mission" ? "open" : ""}`}>
               <p className="muted mt-8">
-                To empower individuals and institutions to achieve financial independence by delivering innovative,
-                transparent, and personalized wealth generation, fund management, and wealth management solutions that
-                build lasting value and financial resilience.
+                To empower individuals and institutions with transparent wealth solutions…
               </p>
             </div>
           </div>
 
           {/* Vision */}
-          <div className="dropdown">
+          <div id="vision" className="dropdown">
             <button
               className={`dropdown-header ${openSection === "vision" ? "active" : ""}`}
               onClick={() => toggleSection("vision")}
@@ -70,15 +85,13 @@ export default function About(): JSX.Element {
             </button>
             <div className={`dropdown-content ${openSection === "vision" ? "open" : ""}`}>
               <p className="muted mt-8">
-                To be a trusted leader in investment excellence—reshaping the future of wealth by combining expert
-                insights, cutting-edge technology, and client-first strategies to unlock sustainable financial growth
-                for all.
+                To be a trusted leader in investment excellence…
               </p>
             </div>
           </div>
 
           {/* Values */}
-          <div className="dropdown">
+          <div id="values" className="dropdown">
             <button
               className={`dropdown-header ${openSection === "values" ? "active" : ""}`}
               onClick={() => toggleSection("values")}
@@ -88,13 +101,14 @@ export default function About(): JSX.Element {
             </button>
             <div className={`dropdown-content ${openSection === "values" ? "open" : ""}`}>
               <ul className="muted mt-8">
-                <li>Put client interests ahead of our firm’s</li>
-                <li>Maintain high standards, ethics, and conditions for client service</li>
-                <li>Preserve client confidences</li>
-                <li>Manage client and firm resources cost-effectively</li>
+                <li>Put client interests first</li>
+                <li>Maintain high professional standards</li>
+                <li>Preserve confidentiality</li>
+                <li>Use resources efficiently</li>
               </ul>
             </div>
           </div>
+
         </div>
       </div>
     </section>
