@@ -7,8 +7,7 @@ export default function Services(): JSX.Element {
       <section id="services" className="section alt">
         <div className="container">
           <div className="section-title">
-            <div className="badge">Services</div>
-            <h2>Products & Services</h2>
+            <h2 className='page-heading'>Products & Services</h2>
 
             <p className="muted mt-8">{SITE.servicesIntro}</p>
 
@@ -22,7 +21,7 @@ export default function Services(): JSX.Element {
           </div>
 
           {/* ===================== WEALTH MANAGEMENT ===================== */}
-          <h2 id="wealth">{SITE.servicesPoints[0]}</h2>
+          <h2 id="wealth" className="page-heading">{SITE.servicesPoints[0]}</h2>
 
           <div className="grid3 gap-16">
             {SITE.services.map((s) => (
@@ -70,7 +69,7 @@ export default function Services(): JSX.Element {
           </div>
 
           {/* ===================== PORTFOLIO MANAGEMENT ===================== */}
-          <h2 id="portfolio">{SITE.servicesPoints[1]}</h2>
+          <h2 id="portfolio" className="page-heading">{SITE.servicesPoints[1]}</h2>
 
           <div className="grid3 gap-16">
             {SITE.pms.map((s) => (
@@ -122,7 +121,7 @@ export default function Services(): JSX.Element {
         {/* ===================== ADVISORY SERVICES ===================== */}
         <div id="advisory" className="container mt-32">
           <div className="section-title">
-            <h2>Advisory Services</h2>
+            <h2 className="page-heading">Advisory Services</h2>
           </div>
 
           <div className="grid4 gap-16">

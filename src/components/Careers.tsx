@@ -6,8 +6,10 @@ export default function Careers(): JSX.Element {
     <section id="careers" className="section">
       <div className="container" id='open-roles'>
         <div className="section-title">
-          <div className="badge">Careers</div>
-          <h2>Work with {SITE.brand}</h2>
+          <h2 className="page-heading">
+            Careers
+            </h2>
+          <h2 className='page-heading'>Work with {SITE.brand}</h2>
         </div>
         <p className="muted maxw">
           We're always exploring great talent in research, advisory, and client success. Share your CV at {SITE.contact.email}.

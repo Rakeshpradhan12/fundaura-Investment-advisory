@@ -69,9 +69,12 @@ export const SITE: SiteConfig = {
       label: 'About Us',
       href: '#about',
       children: [
+        { label: 'Who Are We', href: '#who' },
         { label: 'Mission', href: '#mission' },
         { label: 'Vision', href: '#vision' },
-        { label: 'Values', href: '#values' }
+        { label: 'Values', href: '#values' },
+        { label: 'Why choose us', href: '#why' },
+
       ]
     },
     {
