@@ -15,7 +15,7 @@ export default function Services(): JSX.Element {
               {SITE.servicesPoints.map((point, i) => (
                 <li key={i}>{point}</li>
               ))}
-              
+
             </ul>
 
             <p className="muted mt-8">{SITE.servicesEnd}</p>
@@ -128,6 +128,14 @@ export default function Services(): JSX.Element {
           <div className="grid4 gap-16">
             {SITE.pricing.map((p) => (
               <div key={p.name} className="card p-24">
+
+                {/* Added Image */}
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  className="card-image"
+                />
+
                 <h3>{p.name}</h3>
                 <div className="price">{p.price}</div>
 
@@ -138,7 +146,7 @@ export default function Services(): JSX.Element {
                 </ul>
 
                 <a className="btn mt-16" href="#contact">
-                  Choose {p.name}
+                  {p.name}
                 </a>
               </div>
             ))}

@@ -204,10 +204,46 @@ export const SITE: SiteConfig = {
     { label: 'Customer Satisfaction', value: '100%' }
   ],
   pricing: [
-    { name: 'Standard', price: '₹2,999/mo', features: ['Basic signals', 'Email support', 'Monthly summary'] },
-    { name: 'Ultra ', price: '₹4,999/mo', features: ['Priority alerts', 'Phone support', 'Weekly review call'] },
-    { name: 'Max', price: '₹6,999/mo', features: [`Personalized Support `, 'Expert Analysis',] },
-    { name: 'Custom', price: '₹7,999/mo', features: ['Custom strategies', 'Dedicated RM', 'Detailed reporting'] }
+    {
+      name: "Wealth Advisory",
+      price: "₹25,000 / year",
+      image: "https://cdn-icons-png.flaticon.com/512/3135/3135706.png",
+      features: [
+        "Goal-based planning",
+        "Asset allocation guidance",
+        "Dedicated advisor"
+      ]
+    },
+    {
+      name: "Investment Advisory",
+      price: "₹40,000 / year",
+      image: "https://cdn-icons-png.flaticon.com/512/2331/2331970.png",
+      features: [
+        "Portfolio optimization",
+        "Risk profiling",
+        "Monthly performance reports"
+      ]
+    },
+    {
+      name: "Retirement Advisory",
+      price: "₹18,000 / year",
+      image: "https://cdn-icons-png.flaticon.com/512/992/992651.png",
+      features: [
+        "Retirement corpus estimation",
+        "Pension planning",
+        "Tax-efficient withdrawal"
+      ]
+    },
+    {
+      name: `Tax Planning `,
+      price: "₹8,000 / year",
+      image: "https://cdn-icons-png.flaticon.com/512/942/942748.png",
+      features: [
+        "Income tax review",
+        "HUF strategy",
+        "Advanced savings guidance"
+      ]
+    }
   ],
   social: [
     { label: 'Facebook', href: '#' },
