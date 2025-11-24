@@ -3,7 +3,7 @@ import { SITE } from '../data/site';
 
 export default function KPIs(): JSX.Element {
   return (
-    <section className="kpis">
+    <section className="kpis ">
       <div className="container grid2 center">
         {SITE.kpis.map((k) => (
           <div key={k.label} className="kpi">

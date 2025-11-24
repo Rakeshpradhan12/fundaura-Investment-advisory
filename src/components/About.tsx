@@ -30,7 +30,7 @@ export default function About(): JSX.Element {
       <div className="container">
         <div className="section-title center">
           <div className="badge">{SITE.highlight}</div>
-          <h2 className="page-heading">About the Initiative</h2>
+          <h2 className="page-heading top-heading">About the Initiative</h2>
         </div>
 
         {/* Dropdown Sections */}
@@ -159,7 +159,7 @@ export default function About(): JSX.Element {
               className={`dropdown-content ${openSection === "why" ? "open" : ""}`}
               role="region"
             >
-              <div className="muted mt-8 why-list">
+              <div className="muted mt-8 why-list two-column-grid">
 
                 <div>
                   <h4>Trust and Performance</h4>
@@ -177,9 +177,6 @@ export default function About(): JSX.Element {
                 </div>
 
                 <div>
-
-
-
                   <h4>Dedicated Wealth Managers</h4>
                   <p className="muted mt-8">
                     Our relationship managers are just a WhatsApp call away to help you manage your money.

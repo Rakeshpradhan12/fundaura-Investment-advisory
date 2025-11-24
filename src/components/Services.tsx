@@ -7,7 +7,7 @@ export default function Services(): JSX.Element {
       <section id="services" className="section alt">
         <div className="container">
           <div className="section-title">
-            <h2 className='page-heading'>Products & Services</h2>
+            <h2 className='page-heading top-heading'>Products & Services</h2>
 
             <p className="muted mt-8">{SITE.servicesIntro}</p>
 
@@ -15,6 +15,7 @@ export default function Services(): JSX.Element {
               {SITE.servicesPoints.map((point, i) => (
                 <li key={i}>{point}</li>
               ))}
+              
             </ul>
 
             <p className="muted mt-8">{SITE.servicesEnd}</p>

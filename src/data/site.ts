@@ -56,7 +56,7 @@ export const SITE: SiteConfig = {
     address1: '402, B120, Shapoorji Pallonji Complex, New Town, Kolkata – 700135',
     address2: 'ST-5, 2nd Floor, SRB Tower, Infocity, Patia, Bhubaneswar – 751021',
     phone: '+91-95564 93311',
-    email: 'Riokapital@gmail.com'
+    email: 'customercare@fundaura.in'
   },
   sebi: {
     show: true,

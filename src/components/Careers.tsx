@@ -6,7 +6,7 @@ export default function Careers(): JSX.Element {
     <section id="careers" className="section">
       <div className="container" id='open-roles'>
         <div className="section-title">
-          <h2 className="page-heading">
+          <h2 className="page-heading top-heading">
             Careers
             </h2>
           <h2 className='page-heading'>Work with {SITE.brand}</h2>

@@ -866,6 +866,19 @@ textarea::placeholder {
 ============================ */
 
 /* Apply oval ONLY to top-level headings */
+.top-heading {
+  background-color: var(--brand);
+  /* Uses your brand color */
+  color: white;
+  /* Makes text readable */
+  padding: 6px 12px;
+  /* Clean spacing */
+  border-radius: 6px;
+  /* Soft rounded edges */
+  display: inline-block;
+  /* Keeps background tight */
+}
+
 .page-heading {
   display: block;
   /* stays full row, not inline */
@@ -878,4 +891,17 @@ textarea::placeholder {
   border-radius: 999px;
 
 
+}
+.two-column-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  /* spacing between columns and rows */
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .two-column-grid {
+    grid-template-columns: 1fr;
+  }
 }

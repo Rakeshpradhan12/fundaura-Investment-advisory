@@ -5,7 +5,7 @@ export default function Complaint(): JSX.Element {
     <section id="complaint" className="section alt">
       <div className="container">
         <div className="section-title">
-            <h2 className='page-heading'>Support</h2>
+          <h2 className='page-heading top-heading'>Support</h2>
           <h2 className='page-heading'>Complaint Board &amp; Investor Charter</h2>
         </div>
         <p className="muted maxw">

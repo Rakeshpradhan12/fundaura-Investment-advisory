@@ -4,8 +4,11 @@ import { SITE } from '../data/site';
 export default function Footer(): JSX.Element {
   return (
     <footer className="footer" role="contentinfo">
+
+      {/* Main Footer Grid */}
       <div className="container footer-grid">
-        {/* Logo & copyright */}
+
+        {/* Logo & Copyright */}
         <div className="footer-logo">
           <img
             className="logo-sm"
@@ -63,7 +66,6 @@ export default function Footer(): JSX.Element {
           </ul>
         </nav>
 
-
         {/* Company Navigation */}
         <nav className="footer-section" aria-label="Company">
           <h4>Company</h4>
@@ -94,26 +96,31 @@ export default function Footer(): JSX.Element {
             ))}
           </nav>
         </section>
+
       </div>
 
       {/* Footer Buttons */}
       <nav className="footer-bottom row gap-12 mt-16" aria-label="Footer legal and policy links">
-        <a className="btn outline" href="#" id="terms" role="button">
-          Terms of Use
-        </a>
-        <a className="btn outline" href="#" id="privacy" role="button">
-          Privacy Policy
-        </a>
-        <a className="btn outline" href="#" id="charter" role="button">
-          Investor Charter
-        </a>
+        <a className="btn outline" href="#" id="terms">Terms of Use</a>
+        <a className="btn outline" href="#" id="privacy">Privacy Policy</a>
+        <a className="btn outline" href="#" id="charter">Investor Charter</a>
       </nav>
-      <div id='Disclaimer' className="muted small mt-16">
-        Disclaimer: Investing Involves Risk. This document is for information purposes only and should not be viewed as a legal offering document or solicitation. Offers to invest in this fund are made only by the Discretionary Portfolio Management Services Agreement. Past performance does not guarantee future results and there is no assurance that the managed accounts will necessarily achieve its objectives. Any forward-looking information and/or opinions contained in this document are based on the market information available at the time of publication and are subject to a number of known and unknown risks, uncertainties, assumptions as to future events and other factors that could cause the actual results to differ materially from those implied by the information set forth herein. This information is confidential and is intended for only the person or entity to whom it was sent and in no circumstances may this material be shown, copied, transmitted, or otherwise given to any person other than the authorized recipient. The investments sector allocations and holdings are shown are based on the strategys model portfolio. The holdings shown do not represent all of the securities purchased, sold, or recommended for any particular expertsy client and in the aggregate may represent only a small percentage of an accounts portfolio holdings. Actual portfolios may differ as a result of account size, client-imposed investment restrictions, the timing of client investments and market, economic, and individual company. Considerations. Securities are shown for illustrative purposes only and are not a solicitation to buy or sell any particular security or invest in a particular sector. FUNDAURA may act as an intermediary who coordinates with either a discretionary investment manager or a non-discretionary model provider in a variety of separately managed accounts. Any performance information included herein represents the performance achieved by the various product manufacturers as a discretionary or non-discretionary investment manager with trade implementation responsibility for accounts included in a performance. We at FUNDAURA does not guarantee any returns in the hand of investors not we take any sort of accountability of performance of the scheme.
-        The Company reserves the right to make modifications. The information is obtained from publicly available media or other sources believed to be reliable. Such information has not been independently verified and no guaranty, representation or warranty, express or implied, is made as to its accuracy, completeness or correctness. No representation or warranty, express or implied, is made as to the accuracy, completeness, or fairness of the information and opinions contained in this document. Alternations to this statement as may be required from time to time.
 
-        Copyright @2025 FundAura 						All rights reserved
+      {/* Disclaimer */}
+      <div id="Disclaimer" className="muted small mt-16 leading-relaxed">
+        Disclaimer: Investing involves risk. This document is for information purposes only and should not be viewed as a legal offering document or solicitation. Offers to invest in this fund are made only by the Discretionary Portfolio Management Services Agreement. Past performance does not guarantee future results, and there is no assurance that the managed accounts will achieve their objectives. Any forward-looking information or opinions are based on market data available at the time of publication and are subject to risks, uncertainties, and assumptions. This information is confidential and intended only for the authorized recipient. Portfolio allocations shown are based on strategy models and may differ across accounts due to factors such as size, restrictions, timing, and market conditions. Securities listed are for illustrative purposes and are not recommendations. FUNDAURA may act as an intermediary between discretionary or non-discretionary investment managers. FUNDAURA does not guarantee returns or take accountability for performance.
+
+        The Company reserves the right to make modifications. Information is obtained from reliable sources but is not independently verified. No representation or warranty is made regarding completeness or accuracy.
       </div>
+
+      {/* Highlighted Copyright Bar */}
+      <div className="w-full mt-6">
+        <div className="flex justify-between font-bold p-3 rounded w-full">
+          <span>Copyright @2025 FundAura . </span>
+          <span>All rights reserved.</span>
+        </div>
+      </div>
+
     </footer>
   );
 }
