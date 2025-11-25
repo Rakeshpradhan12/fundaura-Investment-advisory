@@ -146,7 +146,7 @@ export default function Services(): JSX.Element {
                 </ul>
 
                 <a className="btn mt-16" href="#contact">
-                  {p.name}
+                  Choose {p.name}
                 </a>
               </div>
             ))}

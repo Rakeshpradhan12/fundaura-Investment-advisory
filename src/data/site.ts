@@ -205,43 +205,42 @@ export const SITE: SiteConfig = {
   ],
   pricing: [
     {
-      name: "Wealth Advisory",
-      price: "₹25,000 / year",
+      name: "Standard",
+      price: "₹2,999 / month",
       image: "https://cdn-icons-png.flaticon.com/512/3135/3135706.png",
       features: [
-        "Goal-based planning",
-        "Asset allocation guidance",
-        "Dedicated advisor"
+        "Basic signals",
+        "Email support",
+        "Monthly summary"
       ]
     },
     {
-      name: "Investment Advisory",
-      price: "₹40,000 / year",
+      name: "Ultra",
+      price: "₹4,999 / month",
       image: "https://cdn-icons-png.flaticon.com/512/2331/2331970.png",
       features: [
-        "Portfolio optimization",
-        "Risk profiling",
-        "Monthly performance reports"
+        "Priority Alerts",
+        "Phone Support",
+        "Weekly Review"
       ]
     },
     {
-      name: "Retirement Advisory",
-      price: "₹18,000 / year",
+      name: "Max",
+      price: "₹6,999 / month",
       image: "https://cdn-icons-png.flaticon.com/512/992/992651.png",
       features: [
-        "Retirement corpus estimation",
-        "Pension planning",
-        "Tax-efficient withdrawal"
+        "Personalized Support",
+        "Expert Analysis"
       ]
     },
     {
-      name: `Tax Planning `,
-      price: "₹8,000 / year",
+      name: "Custom",
+      price: "₹7,999 / month",
       image: "https://cdn-icons-png.flaticon.com/512/942/942748.png",
       features: [
-        "Income tax review",
-        "HUF strategy",
-        "Advanced savings guidance"
+        " Custom Strategy",
+        "Dedicated RM",
+        "Detailed Reporting"
       ]
     }
   ],
